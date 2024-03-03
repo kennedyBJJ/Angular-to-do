@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Add Item</h2>
+
+<form (ngSubmit)="createItem()">
+    <mat-dialog-content>
+        Description:<input type="text" name="description" [(ngModel)]="description">
+    </mat-dialog-content>
+    
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close>No</button>
+        <button mat-button mat-dialog-close [disabled]="description === ''" type="submit">Ok</button>
+    </mat-dialog-actions>
+</form>

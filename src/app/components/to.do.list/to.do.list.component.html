@@ -1,0 +1,49 @@
+<main>
+
+    <div class="list-section">
+        <section id="uncompleted-side">
+            <h3>
+                To-Do
+            </h3>
+            <hr>
+            <ul>
+                @for (item of uncompletedList; track $index) {
+                    <li *ngIf="item !==undefined">
+                        
+                        <input type="checkbox" name="completedCheckbox" (click)="checkItem($index)">
+                        <p>{{item}}</p>
+                        <button mat-mini-fab color="warn" (click)="deleteUncompletedItem($index)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </li>
+                }
+                
+            </ul>
+            
+        </section>
+        <section id="completed-side">
+            <h3>
+                I did It!
+            </h3>
+            <hr>
+            
+            <ul >
+                @for (item of completedList; track $index) {
+                    <li class="completed" *ngIf="item !==undefined">
+                        <input type="checkbox" name="completedCheckbox" checked (click)="uncheckItem($index)">
+                        <p>{{item}}</p>
+                        <button mat-mini-fab color="warn" (click)="deleteCompletedItem($index)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </li>
+                }
+            </ul>
+        </section>
+
+    </div>
+
+    <button mat-mini-fab color="primary" id="add-button" (click)="openDialog('300ms', '300ms')">
+        <mat-icon fontIcon="add"></mat-icon>     
+    </button>
+
+</main>
