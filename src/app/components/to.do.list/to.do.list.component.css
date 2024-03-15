@@ -51,9 +51,7 @@ li p{
     width: 200px;
 
     text-align: center;
-    /* display: flex;
-    flex-wrap: wrap;
-    height: 50px; */
+
     align-content: center;
     justify-content: center;
 }
