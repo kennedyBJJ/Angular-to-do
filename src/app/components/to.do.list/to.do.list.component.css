@@ -1,5 +1,6 @@
 main{
     height: 80%;
+    width: 100%;
     background-color: aqua;
     
     display: flex;
@@ -9,19 +10,22 @@ main{
 .list-section{
     display: flex;
     justify-content: center;
-
+    height: 100%;
+    width: 50%;
+    margin: 0 25% 0;
 }
 
-section{
+.list-section section{
     border: 1px solid black;
     border-radius: 15px;
 
+    min-height:90%;
     height: fit-content;
 
     margin: 10px;
     padding: 10px;
 
-    width: 300px;
+    width: 50%;
 
 }
 
@@ -48,7 +52,7 @@ li p, li button, li input{
 }
 
 li p{
-    width: 200px;
+    width: fit-content;
 
     text-align: center;
 
@@ -73,4 +77,9 @@ li p{
     position: absolute;
     right: 3vw;
     bottom: 13vh;
+}
+
+mat-icon{
+    display: flex;
+    align-items: center;
 }
